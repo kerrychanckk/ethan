@@ -86,35 +86,71 @@ h2 {
 }
 
 .cake {
-    width: 100px;
-    height: 60px;
-    background: #ff9999;
-    border-radius: 10px;
-    margin: 20px auto;
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+}
+
+.cake-layers {
     position: relative;
 }
 
-.candle {
-    width: 8px;
-    height: 20px;
-    background: #fff;
+.layer {
+    height: 40px;
+    width: 200px;
+    background-color: #f8c1c1;
+    border-radius: 10px;
+    margin-bottom: -20px;
+}
+
+.layer:nth-child(2) {
+    width: 180px;
+    margin-left: 10px;
+    background-color: #ffb6b6;
+}
+
+.layer:nth-child(3) {
+    width: 160px;
+    margin-left: 20px;
+    background-color: #ffa6a6;
+}
+
+.candles {
     position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.candle {
+    width: 10px;
+    height: 30px;
+    background-color: #ffd700;
+    border-radius: 5px;
+    position: relative;
 }
 
 .candle::after {
     content: '';
     position: absolute;
-    top: -5px;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    background: #ffd700;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6b6b;
     border-radius: 50%;
-    animation: flicker 0.5s infinite;
+    box-shadow: 0 0 10px #ff6b6b;
+}
+
+.plate {
+    height: 20px;
+    width: 220px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin: 20px auto 0;
 }
 
 @keyframes float {
