@@ -85,74 +85,6 @@ h2 {
     transform: translateX(-50%);
 }
 
-.cake {
-    position: relative;
-    margin: 50px auto;
-    width: 200px;
-}
-
-.cake-layers {
-    position: relative;
-}
-
-.layer {
-    height: 40px;
-    width: 200px;
-    background-color: #f8c1c1;
-    border-radius: 10px;
-    margin-bottom: -20px;
-}
-
-.layer:nth-child(2) {
-    width: 180px;
-    margin-left: 10px;
-    background-color: #ffb6b6;
-}
-
-.layer:nth-child(3) {
-    width: 160px;
-    margin-left: 20px;
-    background-color: #ffa6a6;
-}
-
-.candles {
-    position: absolute;
-    top: -30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.candle {
-    width: 10px;
-    height: 30px;
-    background-color: #ffd700;
-    border-radius: 5px;
-    position: relative;
-}
-
-.candle::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: #ff6b6b;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #ff6b6b;
-}
-
-.plate {
-    height: 20px;
-    width: 220px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    margin: 20px auto 0;
-}
-
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
@@ -166,6 +98,27 @@ h2 {
 @keyframes flicker {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
+}
+
+.musical-notes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.note {
+    font-size: 24px;
+    color: #4a90e2;
+    animation: float 2s infinite;
+}
+
+.note:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.note:nth-child(3) {
+    animation-delay: 0.8s;
 }
 
 @media (max-width: 480px) {
